@@ -36,6 +36,8 @@
   "dependencies": {
     "ember-cli-babel": "^5.0.0",
     "ember-cli-htmlbars": "^1.0.8",
+    "ember-cli-node-assets": "^0.2.2",
+    "fastboot-transform": "^0.1.2",
     "jquery-ui": "^1.12.1"
   },
   "keywords": [
