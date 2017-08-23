@@ -1,6 +1,7 @@
 /* jshint node: true */
 'use strict';
 var path = require('path');
+var fastbootTransform = require('fastboot-transform');
 
 module.exports = {
   name: 'ember-cli-jquery-ui',
@@ -8,9 +9,11 @@ module.exports = {
   options: {
     nodeAssets: {
       'jquery-ui': {
-        vendor: ['jquery-ui.js'],
-        processTree(input) {
-          return fastbootTransform(input);
+        vendor: {
+          include: ['jquery-ui.js'],
+          processTree(input) {
+            return fastbootTransform(input);
+          }
         }
       }
     }
